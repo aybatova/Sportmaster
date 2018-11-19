@@ -20,7 +20,7 @@ class SportmasterTest {
         {
             Sportmaster service = new Sportmaster();
 
-            int bonus = service.calculateBonus(1000, 14_000);
+            int bonus = service.calculateBonus(1_000, 14_000);
 
             assertEquals(50, bonus);
 
@@ -36,7 +36,7 @@ class SportmasterTest {
         {
             Sportmaster service = new Sportmaster();
 
-            int bonus = service.calculateBonus(1000, 15_001);
+            int bonus = service.calculateBonus(1_000, 15_001);
 
             assertEquals(70, bonus);
 
@@ -52,7 +52,7 @@ class SportmasterTest {
         {
             Sportmaster service = new Sportmaster();
 
-            int bonus = service.calculateBonus(1000, 150_001);
+            int bonus = service.calculateBonus(1_000, 150_001);
 
             assertEquals(100, bonus);
 
@@ -61,7 +61,7 @@ class SportmasterTest {
 
             Sportmaster service = new Sportmaster();
 
-            int bonus = service.calculateBonus(1000, 0);
+            int bonus = service.calculateBonus(1_000, 0);
 
             assertEquals(50, bonus);
         }

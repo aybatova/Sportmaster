@@ -2,6 +2,7 @@ package ru.itpark;
 
 public class Sportmaster {
   public int calculateBonus(int purchaseAmount, int totalAmount) {
+
     int result;
     int purchaseMin = 1_000;
     int bonusBlue = 50;
@@ -12,6 +13,8 @@ public class Sportmaster {
     int minLimitSilver = 15_001;
     int maxLimitSilver = 150_000;
     int boundsCount = purchaseAmount / purchaseMin;
+
+
 
 
     if (totalAmount >= minLimitBlue && totalAmount <= maxLimitBlue) {

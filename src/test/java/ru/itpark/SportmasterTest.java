@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SportmasterTest {
+public class SportmasterTest {
 
     @Test
     @DisplayName("Should calculate bonuses")
@@ -14,7 +14,15 @@ class SportmasterTest {
         {
             Sportmaster service = new Sportmaster();
 
-            int bonus = service.calculateBonus(100, 1_000);
+            int bonus = service.calculateBonus(-1, -1);
+
+            assertEquals(0, bonus);
+
+        }
+        {
+            Sportmaster service = new Sportmaster();
+
+            int bonus = service.calculateBonus(-1, 1);
 
             assertEquals(0, bonus);
 
@@ -30,7 +38,7 @@ class SportmasterTest {
         {
             Sportmaster service = new Sportmaster();
 
-            int bonus = service.calculateBonus(1, 15_001);
+            int bonus = service.calculateBonus(1, -15_001);
 
             assertEquals(0, bonus);
 
